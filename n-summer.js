@@ -23,6 +23,7 @@ last.style.display = "none";
 function zombieHull(){
   zombie.style.display = "block";
   main.style.display = "none";
+  document.title = "次はお前がああなるよ";
   setTimeout("lastHull()",2000);
 }
 
@@ -60,11 +61,13 @@ button.onclick = () =>{
     swap();
     nameArea.innerHTML = name;
     if(gender === "女"){
+      document.title =　"裁きレベル1"; 
       human.src = "./womanA.png"
       var crySetNeedle = setInterval("cryDiside(womanCryNeedle)",1500);
       //レベル2の女
       up.onclick = () => {
         clearInterval(crySetNeedle);
+        document.title = "裁きレベル2";
         fallingDside("./stone.png");
         var crySetStone = setInterval("cryDiside(womanCryStone)",1500);
         human.src = "./womanB.png";
@@ -72,6 +75,7 @@ button.onclick = () =>{
         up.onclick = () => {
           clearInterval(crySetStone);
           fallingDside("./knife.png");
+          document.title = "裁きレベル3";
           cryArea.innerHTML = "";
           human.src = "./womanC.png";
           //オチ、3回連続でレベルを上げるを選択した場合
@@ -84,15 +88,18 @@ button.onclick = () =>{
       
     }else{
       //レベル2の男
+      document.title = "裁きレベル2";
       var crySetNeedle = setInterval("cryDiside(manCryNeedle)",1500);
       up.onclick = () => {
         clearInterval(crySetNeedle);
+        document.title = "裁きレベル3";
         fallingDside("./stone.png");
         var crySetStone = setInterval("cryDiside(manCryStone)",1500);
         human.src = "./manB.png";
         //レベル3の男
         up.onclick = () => {
           clearInterval(crySetStone);
+
           fallingDside("./knife.png");
           cryArea.innerHTML = "";
           human.src = "./manC.png";
@@ -157,5 +164,5 @@ const manCryKnife = [
 
 
 next.onclick = () => {
-  swap();
+  location.reload();
 }

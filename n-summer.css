@@ -1,0 +1,95 @@
+body{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.zombie,.last{
+  width: 100vw;
+}
+
+.falling-area{
+  display: flex;
+  flex-direction: row;
+}
+
+.falling-object{
+  width: 10%;
+  height: 10%;
+}
+
+/*上二つは落下物全体の指定、下falling1などは個別の指定*/
+
+.falling1{
+  animation: down 1s ease-in infinite normal;
+}
+
+.falling2{
+  animation: down 1s ease-in 0.7s infinite normal;
+}
+
+.falling3{
+  animation: down 1s ease-in 1.4s infinite normal;
+}
+
+.falling4{
+  animation: down 1s ease-in 2.1s infinite normal;
+}
+
+.falling5{
+  animation: down 1s ease-in 2.8s infinite normal;
+}
+
+.falling6{
+  animation: down 1s ease-in 3.5s infinite normal;
+}
+
+.falling7{
+  animation: down 1s ease-in 4.2s infinite normal;
+}
+
+.falling8{
+  animation: down 1s ease-in 4.9s infinite normal;
+}
+
+.falling9{
+  animation: down 1s ease-in 5.6s infinite normal;
+}
+
+.falling10{
+  animation: down 1s ease-in 6.3s infinite normal;
+}
+
+.human-area{
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  animation: right 2s ease-in infinite alternate;
+}
+
+.name{
+  margin: 0;
+  font-size: 50px;
+}
+
+.human{
+  width: 15%;
+  height: 15%;
+}
+
+@keyframes down{
+  0%{
+    transform: translateY(0);
+}
+100%{
+    transform: translateY(260px);
+}
+}
+
+@keyframes right{
+  0%{
+      transform: translateX(0);
+  }
+  100%{
+      transform: translateX(1200px);
+  }
+}

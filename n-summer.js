@@ -17,13 +17,11 @@ const zombie = document.getElementById("zombieId");
 const last = document.getElementById("lastId");
 main.style.display = "none";
 questions.style.display = "block";
-zombie.style.display = "none";
-last.style.display = "none";
 
 function zombieHull(){
   zombie.style.display = "block";
   main.style.display = "none";
-  document.title = "次はお前がああなるよ";
+  document.title = "次はお前がこうなるよ";
   setTimeout("lastHull()",2000);
 }
 

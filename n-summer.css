@@ -5,6 +5,11 @@ body{
 }
 .zombie,.last{
   width: 100vw;
+  display: none;
+}
+
+main{
+  display: none;
 }
 
 .falling-area{

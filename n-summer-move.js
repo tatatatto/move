@@ -164,3 +164,4 @@ const manCryKnife = [
 next.onclick = () => {
   location.reload();
 }
+

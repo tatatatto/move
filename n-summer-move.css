@@ -3,14 +3,15 @@ body{
   display: flex;
   flex-direction: column;
 }
-.zombie,.last{
-  width: 100vw;
-  display: none;
-}
 
 section{
   margin-left: 1.5vw;
   margin-top:0.5vw;
+}
+
+.zombie,.last{
+  width: 100vw;
+  display: none;
 }
 
 main{

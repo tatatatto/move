@@ -18,6 +18,8 @@ const last = document.getElementById("lastId");
 main.style.display = "none";
 questions.style.display = "block";
 
+//下の二つの関数でオチとしてゾンビの画像と最後の文言が出る
+
 function zombieHull(){
   zombie.style.display = "block";
   main.style.display = "none";
@@ -30,7 +32,9 @@ function lastHull(){
   zombie.style.display = "none";
 }
 
+
 function swap(){
+  //htmlのメインタグとquestionsの表示、非表示を切り替える
   if(main.style.display === "none"){
     main.style.display = "block";
     questions.style.display = "none";
@@ -41,11 +45,13 @@ function swap(){
 }
 
 function fallingDside(fallingSrc){
+  //落花する画像を切り替える
   for(var item of falling){
     item.src = fallingSrc;
 }}
 
 function cryDiside(cryArray){
+  //表示するメッセージを選択する
   var random = Math.floor( Math.random() * 5 );
   cryArea.innerHTML = cryArray[random];
 }
@@ -54,11 +60,13 @@ button.onclick = () =>{
   var name = nameId.value;
   var gender = genderId.value;
   if(!name){
+    //入力の確認
     alert('全て入力してください');
   }else{
     swap();
     nameArea.innerHTML = name;
     if(gender === "女"){
+      //画像とメッセージを女性用に変える。デフォルトは男になっている
       document.title =　"裁きレベル1"; 
       human.src = "./womanA.png"
       var crySetNeedle = setInterval("cryDiside(womanCryNeedle)",1500);
@@ -115,6 +123,8 @@ button.onclick = () =>{
 
 }
 
+//上に表示されるメッセージ
+
 const womanCryNeedle = [
   "かっ、体が勝手に！止まれない！",
   "だっ、誰か、助けて！",
@@ -156,12 +166,7 @@ const manCryKnife = [
 ]
 
 
-
-
-
-
-
 next.onclick = () => {
+  //他の人間に対象を変えたいときにリロードして最初に戻す
   location.reload();
 }
-
